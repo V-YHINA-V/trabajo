@@ -264,3 +264,15 @@ reiniciar.addEventListener('click', againPage)
 function againPage() {
   location.reload()
 }
+iniciar.addEventListener('click', againPage)
+function againPage() {
+  location.reload()
+}
+
+
+const playSound = function() {
+  var sonido = new Audio("Audio.mp3");
+  sonido.play();
+  document.removeEventListener('click', playSound);
+}
+document.addEventListener('click', playSound);
